@@ -18,7 +18,7 @@ const addLoading = () => {
 const errorMessage = () => {
   const errorMsg = document.createElement('div');
   document.querySelector('body')
-  .appendChild(errorMsg);
+    .appendChild(errorMsg);
   errorMsg.innerText = 'Algum erro ocorreu, recarregue a página e tente novamente';
   errorMsg.className = 'error';
   return errorMsg;
@@ -30,8 +30,8 @@ const createItemList = async () => {
     const list = await fetchProductsList('computador');
     productsSection.innerHTML = '';
     list.forEach((element) => {
-        const product = createProductElement(element);
-        productsSection.appendChild(product);
+      const product = createProductElement(element);
+      productsSection.appendChild(product);
     });
   } catch {
     errorMessage();
